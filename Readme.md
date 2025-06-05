@@ -33,9 +33,11 @@ Install dependencies:
 standard-llama-finetune/
 ├── data.jsonl                      ← training dataset (editable)
 ├── step0_download_base_model.py    ← download base model from Hugging Face
-├── step1_fine_tuning.py            ← download base model from Hugging Face
-├── step2_merg.py                   ← fine-tune TinyLlama with LoRA
-├── step3_test.py                   ← merge LoRA adapter into base model
+├── step1_0_pdf_to_text.py          ← Convert PDF to text
+├── step1_1_generate_jsonl.py       ← Generate JSONL file for fine-tuning data
+├── step2_fine_tuning.py            ← download base model from Hugging Face
+├── step3_merg.py                   ← fine-tune TinyLlama with LoRA
+├── step4_test.py                   ← merge LoRA adapter into base model
 ```
 
 ---
@@ -73,7 +75,7 @@ This will save the .jsonl file at the root.
 ## 🧠 2. Fine-Tune with LoRA
 
 ```bash
-python step1_fine_tuning.py
+python step2_fine_tuning.py
 ```
 
 - Trains on `data.jsonl`
@@ -85,7 +87,7 @@ python step1_fine_tuning.py
 ## 🔗 3. Merge LoRA into Base Model
 
 ```bash
-python step2_merg.py
+python step3_merg.py
 ```
 
 - Merges the LoRA weights into the base model
@@ -96,7 +98,7 @@ python step2_merg.py
 ## 🧪 4. Run Sanity Check (Optional)
 
 ```bash
-python step3_test.py
+python step4_test.py
 ```
 
 Expected output:
