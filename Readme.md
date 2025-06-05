@@ -112,15 +112,15 @@ Hassan Habib is a software engineering leader and the author of The Standard.
 ## 🦙 5. Convert to `.gguf` for llama.cpp (make sure you install CMake, clone and build llama.cpp)
 
 ```bash
-cd llama.cpp/convert-hf-to-gguf
-python3 convert.py ../../../tinyllama-merged --outfile standard-llama.gguf --outtype f16
+cd llama.cpp/
+python3 convert_hf_to_gguf.py ../tinyllama-merged --outfile standard-mini.gguf --outtype f16
 ```
 
 Then run with:
 
 ```bash
-cd ../../build/bin
-./llama -m ../../../llama.cpp/convert-hf-to-gguf/standard-llama.gguf
+./build/bin/llama-cli --model standard-mini.gguf --prompt "Describe Orchestration services"
+
 ```
 
 Paste this prompt:
@@ -137,10 +137,16 @@ Who is Hassan Habib?
 ---
 
 ## 📽️ Video Step-by-Step
-https://youtu.be/FQr7VrK5RRQ
+## How to Run AI Offline w/ .NET
+https://www.youtube.com/watch?v=lc6lVCe0XHI&t=3s
+
+## How to Fine-Tune your AI Model
+https://www.youtube.com/watch?v=FQr7VrK5RRQ&t=1087s
+
+## How to Feed your Llama Model (TXT to JSONL)
+https://www.youtube.com/watch?v=YB9cVyjV9Bo
 
 ## 👨‍🏫 Author
-
 Built and tested by [Hassan Habib](https://github.com/hassanhabib), fine-tuned with ❤️ and terminal grit.
 
 ---
