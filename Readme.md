@@ -40,7 +40,7 @@ standard-llama-finetune/
 
 ---
 
-## 🔽 1. Download the Base Model
+## 🔽 0. Download the Base Model
 
 ```bash
 python step0_download_base_model.py
@@ -50,13 +50,33 @@ This will save the model to `./tinyllama-base/`
 
 ---
 
+## 🔽 1.0. Convert PDF to Raw Text
+
+```bash
+python step1_0_pdf_to_text.py
+```
+
+This will save the .txt file at the root.
+
+---
+
+## 🔽 1.1. Generate JSONL Files
+
+```bash
+python step1_1_generate_jsonl.py
+```
+
+This will save the .jsonl file at the root.
+
+---
+
 ## 🧠 2. Fine-Tune with LoRA
 
 ```bash
 python step1_fine_tuning.py
 ```
 
-- Trains on `data/data.jsonl`
+- Trains on `data.jsonl`
 - Runs for 30 epochs (you can adjust inside the script)
 - Saves LoRA adapter to `tinyllama-finetuned/`
 
