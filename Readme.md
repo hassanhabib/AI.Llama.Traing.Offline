@@ -146,6 +146,9 @@ https://www.youtube.com/watch?v=FQr7VrK5RRQ&t=1087s
 ## How to Feed your Llama Model (TXT to JSONL)
 https://www.youtube.com/watch?v=YB9cVyjV9Bo
 
+## Make Your Offline AI Model Talk to Local SQL — Fully Private RAG with LLaMA + FAISS
+https://www.youtube.com/watch?v=3jFpLNglWBc&t=293s
+
 ## 👨‍🏫 Author
 Built and tested by [Hassan Habib](https://github.com/hassanhabib), fine-tuned with ❤️ and terminal grit.
 
